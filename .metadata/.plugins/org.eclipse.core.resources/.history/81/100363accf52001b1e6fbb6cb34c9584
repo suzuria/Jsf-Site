@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head></h:head>
+<body>
+	<f:view>
+		<h:form>
+			<h:panelGrid columns="2">
+				Ad<h:inputText value="#{calisanArama.calisan.ad}" />
+				Soyad<h:inputText value="#{calisanArama.calisan.soyad}" />
+				Maas<h:inputText value="#{calisanArama.calisan.maas}" />
+				Gorev
+		<!-- 	Cadde<h:inputText value="#{calisanArama.calisan.adres.cadde}" />
+				Sokak<h:inputText value="#{calisanArama.calisan.adres.sokak}" />     -->
+				Ara Ad<h:inputText value="#{calisanArama.araAd}" />
+				Ara Soyad<h:inputText value="#{calisanArama.araSoyad}" />
+				<h:commandButton action="#{calisanArama.kaydet()}" value="KaYdEt" />
+				<h:commandButton value="Ara" />
+			</h:panelGrid>
+			<p:dataTable value="#{calisanArama.calisanListesi}" var="cls">
+				<f:facet name="header">MUSTERI KAYIT LİSTESİ</f:facet>
+				<p:column>
+					<f:facet name="header">AD</f:facet>
+					<h:outputText value="#{cls.ad}" />
+				</p:column>
+				<p:column>
+					<f:facet name="header">SOYAD</f:facet>
+					<h:outputText value="#{cls.soyad}" />
+				</p:column>
+				<p:column>
+					<f:facet name="header">GÖREV</f:facet>
+					<h:outputText value="#{cls.gorev}" />
+				</p:column>
+				<p:column>
+					<f:facet name="header">MAAŞ</f:facet>
+					<h:outputText value="#{cls.maas}" />
+				</p:column>
+				<p:column>
+					<f:facet name="header">Yillik GELİR</f:facet>
+					<h:outputText value="#{cls.yillikGelir}" />
+			</p:dataTable>
+			<p:dataTable value="#{calisanArama.calisanListesiAra}" var="cls">
+				<f:facet name="header">MUSTERI ARAMA LİSTESİ</f:facet>
+				<p:column>
+					<f:facet name="header">AD</f:facet>
+					<h:outputText value="#{cls.ad}" />
+				</p:column>
+				<p:column>
+					<f:facet name="header">SOYAD</f:facet>
+					<h:outputText value="#{cls.soyad}" />
+				</p:column>
+			</p:dataTable>
+		</h:form>
+	</f:view>
+</body>
+</html>

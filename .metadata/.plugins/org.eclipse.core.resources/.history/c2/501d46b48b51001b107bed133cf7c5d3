@@ -1,0 +1,80 @@
+package com.mergeCons.egitim.util;
+
+import java.util.List;
+
+import javax.faces.component.html.HtmlInputText;
+import javax.persistence.EntityManager;
+
+public class HumanBean {
+	public void kaydet() {
+		EntityManager en = EntityUtil.getEntityManager();
+		en.getTransaction().begin();
+		Ogrenci ogrenci = new Ogrenci();
+		ogrenci.setAd("Adana");
+		ogrenci.setDers("Java");
+		ogrenci.setOgrenciId(123456);
+		ogrenci.setSoyad("Kozan");
+		en.persist(ogrenci);
+
+		Ogretmen ogretmen = new Ogretmen();
+		ogretmen.setAd("Sinan");
+		ogretmen.setSicilNo(12345);
+		ogretmen.setSoyad("TOKLU");
+		ogretmen.setVerilenDers("Kurumsal JAVA");
+		en.persist(ogretmen);
+
+		Okul okul = new Okul();
+		okul.setAd("Gazi");
+		okul.setOkulAdi("Gazi Universitesi");
+		okul.setSehir("Ankara");
+		okul.setSoyad("Cankaya");
+		en.persist(okul);
+
+		en.getTransaction().commit();
+	}
+
+	private String adi;
+	private HtmlInputText addegeri;
+
+	public void kaydet2() {
+		System.out.println(adi);
+		System.out.println(addegeri.getValue());
+		addegeri.setDisabled(true);
+	}
+
+	public List<Human> getHumanList() {
+		EntityManager en = EntityUtil.getEntityManager();
+		return en.createQuery("from com.mergeCons.egitim.util.Human").getResultList();
+	}
+
+	public List<Ogrenci> getOgrenciList() {
+		EntityManager en = EntityUtil.getEntityManager();
+		return en.createQuery("from Ogrenci").getResultList();
+	}
+
+	public List<Ogretmen> getOgretmenList() {
+		EntityManager en = EntityUtil.getEntityManager();
+		return en.createQuery("from Ogretmen").getResultList();
+	}
+
+	public List<Okul> getOkulList() {
+		EntityManager en = EntityUtil.getEntityManager();
+		return en.createQuery("from Okul").getResultList();
+	}
+
+	public HtmlInputText getAddegeri() {
+		return addegeri;
+	}
+
+	public void setAddegeri(HtmlInputText addegeri) {
+		this.addegeri = addegeri;
+	}
+
+	public String getAdi() {
+		return adi;
+	}
+
+	public void setAdi(String adi) {
+		this.adi = adi;
+	}
+}

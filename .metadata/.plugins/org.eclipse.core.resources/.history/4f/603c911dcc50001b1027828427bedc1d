@@ -1,0 +1,39 @@
+package com.mergeCons.egitim.util;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class CalisanView {
+	private Calisan calisan = new Calisan();
+	private List<Calisan> calisans = new ArrayList<Calisan>();
+	
+	public void kaydet() {
+		calisans.add(calisan);
+		calisan = new Calisan();
+	}
+	
+	public void sil() {
+		calisans.remove(calisan);
+		calisan = new Calisan();
+	}
+	
+	public void duzenle() {
+		calisan = new Calisan();
+	}
+	
+	
+	
+	
+	public Calisan getCalisan() {
+		return calisan;
+	}
+	public List<Calisan> getCalisans() {
+		return calisans;
+	}
+	public void setCalisan(Calisan calisan) {
+		this.calisan = calisan;
+	}
+	public void setCalisans(List<Calisan> calisans) {
+		this.calisans = calisans;
+	}
+}

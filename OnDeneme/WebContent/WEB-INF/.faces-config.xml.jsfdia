@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="JSFProcess">
+ <PROCESS-ITEM NAME="rules:#Calisan.xhtml" PATH="/Calisan.xhtml"
+  SHAPE="368,168,50,25" model-entity="JSFProcessGroup" persistent="true"/>
+ <PROCESS-ITEM NAME="rules:#Giris.xhtml" PATH="/Giris.xhtml"
+  SHAPE="176,216,50,41" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#Giris.xhtml:0" NAME="item"
+   PATH="/Giris.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="dogru::#Calisan.xhtml" NAME="output"
+    PATH="/Calisan.xhtml" TARGET="rules:#Calisan.xhtml" TITLE="dogru" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="yanlis::#KayitSilmeKismi.xhtml"
+    NAME="output1" PATH="/KayitSilmeKismi.xhtml"
+    TARGET="rules:#KayitSilmeKismi.xhtml" TITLE="yanlis" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#KayitSilmeKismi.xhtml"
+  PATH="/KayitSilmeKismi.xhtml" SHAPE="384,256,50,25"
+  model-entity="JSFProcessGroup" persistent="true"/>
+</PROCESS>

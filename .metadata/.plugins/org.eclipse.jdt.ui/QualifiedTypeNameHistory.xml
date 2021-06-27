@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="javax.persistence.ManyToOne"/>
+<fullyQualifiedTypeName name="Proje"/>
+<fullyQualifiedTypeName name="javax.persistence.ManyToMany"/>
+<fullyQualifiedTypeName name="com.sun.org.apache.bcel.internal.generic.NEW"/>
+<fullyQualifiedTypeName name="javax.persistence.OneToMany"/>
+<fullyQualifiedTypeName name="Adres"/>
+<fullyQualifiedTypeName name="Departman"/>
+<fullyQualifiedTypeName name="Calisan"/>
+<fullyQualifiedTypeName name="org.hibernate.annotations.Formula"/>
+<fullyQualifiedTypeName name="com.mergeCons.egitim.util.CalisanAdres"/>
+<fullyQualifiedTypeName name="java.nio.MappedByteBuffer"/>
+<fullyQualifiedTypeName name="javax.persistence.CascadeType"/>
+<fullyQualifiedTypeName name="java.lang.Object"/>
+<fullyQualifiedTypeName name="javax.persistence.GeneratedValue"/>
+<fullyQualifiedTypeName name="javax.persistence.Id"/>
+<fullyQualifiedTypeName name="javax.persistence.OneToOne"/>
+<fullyQualifiedTypeName name="org.apache.commons.collections.functors.IfClosure"/>
+<fullyQualifiedTypeName name="org.hibernate.property.Dom4jAccessor.ElementAttributeSetter"/>
+<fullyQualifiedTypeName name="org.hibernate.loader.custom.Return"/>
+<fullyQualifiedTypeName name="javax.persistence.Entity"/>
+<fullyQualifiedTypeName name="javax.persistence.Table"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="org.w3c.dom.html.HTMLInputElement"/>
+<fullyQualifiedTypeName name="org.primefaces.component.inputtext.InputText"/>
+<fullyQualifiedTypeName name="javax.persistence.EntityManager"/>
+<fullyQualifiedTypeName name="com.mergeCons.egitim.util.EntityUtil"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="java.lang.Long"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.io.Serializable"/>
+<fullyQualifiedTypeName name="com.mergeCons.egitim.util.Calisan"/>
+</qualifiedTypeNameHistroy>

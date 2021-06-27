@@ -1,0 +1,10 @@
+package com.mergeCons.egitim.util;
+
+public class HtmlInputText {
+
+	public void setDisabled(boolean b) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

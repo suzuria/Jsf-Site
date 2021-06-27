@@ -1,0 +1,38 @@
+package com.mergeCons.egitim.util;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+
+public class CalisanArama {
+	private Calisan calisan = new Calisan();
+	String araAd;
+	String araSoyad;
+
+	public void kaydet() {
+		EntityManager en = EntityUtil.getEntityManager();
+		en.getTransaction().begin();
+		en.persist(calisan);
+		en.getTransaction().commit();
+		calisan = new Calisan();
+	}
+
+	public List<Calisan> getCalisanListesi() {
+		EntityManager en = EntityUtil.getEntityManager();
+		return en.createQuery("select m From Calisan m").getResultList();
+	}
+	public List<Calisan> getCalisanListesiAra() {
+		EntityManager en = EntityUtil.getEntityManager();
+		return en.createQuery("select m From Calisan m where ad like :isim and soyad like : soyad ")
+				.setParameter("isim", this.araAd = "%").setParameter("soyad", this.araSoyad = "%").getResultList();
+	}
+
+	public Calisan getCalisan() {
+		return calisan;
+	}
+
+	public void setCalisan(Calisan calisan) {
+		this.calisan = calisan;
+	}
+
+}

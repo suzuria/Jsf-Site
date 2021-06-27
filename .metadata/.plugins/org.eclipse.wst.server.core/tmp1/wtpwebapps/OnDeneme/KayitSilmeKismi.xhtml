@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head></h:head>
+<body>
+	<f:view>
+		<h:form>
+			<h:panelGrid columns="2">
+				Ad<h:inputText value="#{calisanView.calisan.ad}" />
+				Soyad<h:inputText value="#{calisanView.calisan.soyad}" />
+				Cadde<h:inputText value="#{calisanView.calisan.adres.cadde}" />
+				Sokak<h:inputText value="#{calisanView.calisan.adres.sokak}" />
+				Telefon Numarası<h:inputText value="#{calisanView.calisan.telefon}"/>
+				<h:commandButton action="#{calisanView.kaydet()}" value="KaYdEt" />
+				<h:commandButton action="#{calisanView.duzenle()}" value="Guncelle" rendered="#{calisanView.calisan.ad !=null}"/>
+				<h:commandButton value="Ara" />
+			</h:panelGrid>Burada Yeni kayıt olmuş ancak kadroya geçmemiş çalışanlar gözükür
+			<p:dataTable value="#{calisanView.listele}" var="cls">
+				<f:facet name="header">ONAY BEKLEYEN YENİ KAYIT LİSTESİ</f:facet>
+				<p:column>
+					<f:facet name="header">Güncelle</f:facet>
+					<h:commandLink  value="Guncelle">
+						<f:setPropertyActionListener value="#{cls}" 
+							target="#{calisanView.calisan}" />
+					</h:commandLink>
+				</p:column>
+				<p:column>
+					<f:facet name="header">Sİl</f:facet>
+					<h:commandLink action="#{calisanView.sil()}" value="Sil">
+						<f:setPropertyActionListener value="#{cls}"
+							target="#{calisanView.calisan}" />
+					</h:commandLink>
+				</p:column>
+				<p:column>
+					<f:facet name="header">AD</f:facet>
+					<h:outputText value="#{cls.ad}" />
+				</p:column>
+				<p:column>
+					<f:facet name="header">SOYAD</f:facet>
+					<h:outputText value="#{cls.soyad}" />
+				</p:column>
+				<p:column>
+					<f:facet name="header">Cadde</f:facet>
+					<h:outputText value="#{cls.adres.cadde}" />
+				</p:column>
+				<p:column>
+					<f:facet name="header">Sokak</f:facet>
+					<h:outputText value="#{cls.adres.sokak}" />
+				</p:column>
+				<p:column>
+					<f:facet name="header">Telefon Numarası</f:facet>
+					<h:outputText value="#{cls.telefon}" />
+				</p:column>
+			</p:dataTable>
+		</h:form>
+	</f:view>
+</body>
+</html>

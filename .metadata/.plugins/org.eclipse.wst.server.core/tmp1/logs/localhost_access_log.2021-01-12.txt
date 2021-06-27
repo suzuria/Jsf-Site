@@ -1,0 +1,12 @@
+127.0.0.1 - - [12/Jan/2021:14:42:06 +0300] "GET / HTTP/1.1" 404 951
+0:0:0:0:0:0:0:1 - - [12/Jan/2021:14:42:25 +0300] "GET /OnDeneme/Calisan.jsf HTTP/1.1" 200 8458
+0:0:0:0:0:0:0:1 - - [12/Jan/2021:14:42:25 +0300] "GET /OnDeneme/javax.faces.resource/jquery/jquery.js.jsf?ln=primefaces&v=5.0 HTTP/1.1" 200 108195
+0:0:0:0:0:0:0:1 - - [12/Jan/2021:14:42:25 +0300] "GET /OnDeneme/javax.faces.resource/theme.css.jsf?ln=primefaces-aristo HTTP/1.1" 200 28075
+0:0:0:0:0:0:0:1 - - [12/Jan/2021:14:42:25 +0300] "GET /OnDeneme/javax.faces.resource/primefaces.css.jsf?ln=primefaces&v=5.0 HTTP/1.1" 200 55469
+0:0:0:0:0:0:0:1 - - [12/Jan/2021:14:42:25 +0300] "GET /OnDeneme/javax.faces.resource/jquery/jquery-plugins.js.jsf?ln=primefaces&v=5.0 HTTP/1.1" 200 220756
+0:0:0:0:0:0:0:1 - - [12/Jan/2021:14:42:25 +0300] "GET /OnDeneme/javax.faces.resource/primefaces.js.jsf?ln=primefaces&v=5.0 HTTP/1.1" 200 300675
+0:0:0:0:0:0:0:1 - - [12/Jan/2021:14:42:25 +0300] "GET /OnDeneme/javax.faces.resource/oamSubmit.js.jsf?ln=org.apache.myfaces HTTP/1.1" 200 1874
+0:0:0:0:0:0:0:1 - - [12/Jan/2021:14:42:26 +0300] "GET /favicon.ico HTTP/1.1" 404 973
+0:0:0:0:0:0:0:1 - - [12/Jan/2021:14:49:39 +0300] "GET /OnDeneme/KayitSilmeKismi.jsf HTTP/1.1" 200 4781
+0:0:0:0:0:0:0:1 - - [12/Jan/2021:15:16:43 +0300] "GET /OnDeneme/Giris.jsf HTTP/1.1" 200 1272
+0:0:0:0:0:0:0:1 - - [12/Jan/2021:15:17:26 +0300] "GET /OnDeneme/Giris.jsf HTTP/1.1" 200 1272
